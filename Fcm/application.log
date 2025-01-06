@@ -1,0 +1,13 @@
+[INFO ] 2025-01-06 15:59:56.668 [main] Log - *** Running test method TC_RoleModule...
+[INFO ] 2025-01-06 16:00:00.199 [main] Log - Driver has initialized successfully for chromebrowser
+[INFO ] 2025-01-06 16:00:10.903 [main] Log - Title is displayed : BeaconICnRM
+[ERROR] 2025-01-06 16:01:06.567 [main] Log - *** Test execution TC_RoleModule failed...
+[ERROR] 2025-01-06 16:01:06.568 [main] Log - element click intercepted: Element <span class="rz-column-title">...</span> is not clickable at point (1054, 221). Other element would receive the click: <td style="font-weight:bold">...</td>
+  (Session info: chrome=131.0.6778.205)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SPCOKLAP-5245', ip: '192.168.1.3', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: C:\Users\aiswarya.m\AppData...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60408}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 24e3f393af5088295679dfba7aa907da
+[INFO ] 2025-01-06 16:01:07.466 [main] Log - Logout is done
+[INFO ] 2025-01-06 16:01:08.124 [main] Log - *** Test Suite TC_RoleModule ending ***
