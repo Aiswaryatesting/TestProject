@@ -39,8 +39,7 @@ public class AllScenarios_CallCentremodule extends Base_Class {
 		log = new Log();
 		TestListener = new TestListener();
 		screenShot = new com.Utility.ScreenShot(null);
-		//
-		//
+		
 		Base_Class = new Base_Class();
 		
 		RoleManagmentModule= new RoleManagmentModule();
@@ -63,22 +62,24 @@ public class AllScenarios_CallCentremodule extends Base_Class {
 				Log.info("Login successful !");
 				Thread.sleep(3000);
 				
-				String leaveType = testdata.get("leaveType").toString();
-				String fromYear = testdata.get("fromYear").toString();
-				String fromMonth = testdata.get("fromMonth").toString();
-				String fromDate = testdata.get("fromDate").toString();
-				String toYear = testdata.get("toYear").toString();
-				String toMonth = testdata.get("toMonth").toString();
-				String toDate = testdata.get("toDate").toString();
-				String duration = testdata.get("duration").toString();
-				String Reason = testdata.get("Reason").toString();
-				String Employee = testdata.get("Employee").toString();
+//				String leaveType = testdata.get("Rolename").toString();
+//				String fromYear = testdata.get("fromYear").toString();
+//				String fromMonth = testdata.get("fromMonth").toString();
+//				String fromDate = testdata.get("fromDate").toString();
+//				String toYear = testdata.get("toYear").toString();
+//				String toMonth = testdata.get("toMonth").toString();
+//				String toDate = testdata.get("toDate").toString();
+//				String duration = testdata.get("duration").toString();
+//				String Reason = testdata.get("Reason").toString();
+//				String Employee = testdata.get("Employee").toString();
 
 
 			//PDF Restriction Error Displayed
-			ExtentTestManager.startTest("TestScenario01 : Leave Request Form");
+			ExtentTestManager.startTest("TestScenario01 : Role management");
 			Thread.sleep(3000);
+			Log.info("before RoleManagmentModule !");
 			boolean flag1 = RoleManagmentModule.clickOnfcmModule(); 
+			Log.info("after RoleManagmentModule !");
 			
 			Thread.sleep(5000);
 			//ExtentTestManager.getTest().log(Status.PASS, "Validated Leave Request Form : " + flag1);
@@ -95,14 +96,14 @@ public class AllScenarios_CallCentremodule extends Base_Class {
 			
 			//Thread.sleep(5000);
 			// Logout
-			ExtentTestManager.startTest("Application Logout Initiated.");
+			/*ExtentTestManager.startTest("Application Logout Initiated.");
 			context.setAttribute("fileName", "Logout");
 			click(userDropDown);
 			click(L_signout);
 			Thread.sleep(2000);
 			driver.quit();
 			ExtentTestManager.getTest().log(Status.PASS, "Application Logout");
-			Log.info("Logout is done!"); 
+			Log.info("Logout is done!"); */
 
 			// EndTest
 			System.out.println(("*** Test Suite " + testdata.get("TestScenario").toString() + " ending ***"));
@@ -117,7 +118,7 @@ public class AllScenarios_CallCentremodule extends Base_Class {
 			System.out.println("*** Test execution " + testdata.get("TestScenario").toString() + " failed...");
 			Log.error("*** Test execution " + testdata.get("TestScenario").toString() + " failed...");
 			Log.error("" + e.getMessage());
-			String fileName = (String) context.getAttribute("fileName");
+			String fileName = (String) context.getAttribute("fileName"); 
 
 			try {
 				File file = new com.Utility.ScreenShot(driver).takeScreenShot(fileName,

@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
   <classes>
-      <class name="com.test.CallcentreModule.AllScenarios_Login"/>
+      <class name="com.test.CallcentreModule.AllScenarios_CallCentremodule"/>
       
     </classes>
   </test> <!-- Test -->

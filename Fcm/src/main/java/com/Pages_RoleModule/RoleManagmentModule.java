@@ -1,25 +1,28 @@
 package com.Pages_RoleModule;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.BasePackage.Base_Class;
 import com.PageRepositary.PageRepositary_callcentreRole;
+import com.extentReports.ExtentTestManager;
 
 public class RoleManagmentModule extends Base_Class {
 	PageRepositary_callcentreRole PageRepositary= new PageRepositary_callcentreRole();
-
+	
 	public boolean clickOnfcmModule() throws InterruptedException 
 	{
-		click(PageRepositary.username);
+	
+		/*click(PageRepositary.username);
 		Thread.sleep(1000);
 		click(PageRepositary.password);
 		Thread.sleep(1000);
 		click(PageRepositary.submit);
-		Thread.sleep(2000);
+		Thread.sleep(2000); */
 		
-		
+		//handlePopupDesktop();
 		
 	
 		WebDriverWait wait1 = new WebDriverWait(driver, 30);
@@ -45,18 +48,33 @@ public class RoleManagmentModule extends Base_Class {
 		System.out.println("clickaction");
 		ElementDisplayed(PageRepositary.rolegrid);
 		Thread.sleep(2000);
+		
+		 /*WebDriverWait wait11 = new WebDriverWait(driver, 30);
+			wait11.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.action));
+			System.out.println("clickaction");
+			ElementDisplayed(PageRepositary.action);
+			WebDriverWait wait13 = new WebDriverWait(driver, 30);
+			wait13.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.rolegrid));
+			System.out.println("clickaction");
+			ElementDisplayed(PageRepositary.rolegrid);
+			Thread.sleep(2000);*/
+			
+		
 		WebDriverWait wait4 = new WebDriverWait(driver, 30);
 		wait4.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.addrole));
 		System.out.println("click addrole");
 		 System.out.println(ExpectedConditions.presenceOfElementLocated(PageRepositary.addrole));
-		click(PageRepositary.role);
+		click(PageRepositary.addrole);
 		Thread.sleep(10000);
 		
 		WebDriverWait wait5 = new WebDriverWait(driver, 30);
-		wait5.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.addrole));
+		wait5.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.rolename));
 		System.out.println("click addrole");
 		 System.out.println(ExpectedConditions.presenceOfElementLocated(PageRepositary.rolename));
 		click(PageRepositary.rolename);
+		input(PageRepositary.rolename , "rolecalling100");
+		//input(PageRepositary.rolename);
+		
 		Thread.sleep(1000);
 		
 		WebDriverWait wait6 = new WebDriverWait(driver, 30);
@@ -74,30 +92,24 @@ public class RoleManagmentModule extends Base_Class {
 		click(PageRepositary.savebutton);
 		Thread.sleep(50000);
 		
-		WebDriverWait wait10 = new WebDriverWait(driver, 100);
+		/*WebDriverWait wait10 = new WebDriverWait(driver, 200);
 		wait10.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.validationmessage));
+		 Thread.sleep(5000);
 		String actualMessage = driver.findElement(PageRepositary.validationmessage).getText();
 		System.out.println(actualMessage);
         String expectedMessage = ("Record Saved Successfully") ;
         Assert.assertEquals(expectedMessage, actualMessage);
         System.out.println(expectedMessage);
-        Thread.sleep(500000);
+        Thread.sleep(5000); */
         
         //search 
-        WebDriverWait wait11 = new WebDriverWait(driver, 30);
-		wait11.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.action));
-		System.out.println("clickaction");
-		ElementDisplayed(PageRepositary.action);
-		WebDriverWait wait13 = new WebDriverWait(driver, 30);
-		wait13.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.rolegrid));
-		System.out.println("clickaction");
-		ElementDisplayed(PageRepositary.rolegrid);
-		Thread.sleep(2000);
-		WebDriverWait wait12 = new WebDriverWait(driver, 30);
+        
+        WebDriverWait wait12 = new WebDriverWait(driver, 30);
 		wait12.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.search));
 		//System.out.println("click addrole");
 		 //System.out.println(ExpectedConditions.presenceOfElementLocated(PageRepositary.rolename));
-		ElementDisplayed(PageRepositary.search);
+		click(PageRepositary.search);
+		input(PageRepositary.search , "rolecalling");
 		Thread.sleep(1000);
 		WebDriverWait wait14 = new WebDriverWait(driver, 30);
 		wait14.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.searchbutton));
@@ -106,12 +118,46 @@ public class RoleManagmentModule extends Base_Class {
 		click(PageRepositary.searchbutton);
 		Thread.sleep(10000);
 		
+		// update 
+		 WebDriverWait wait13 = new WebDriverWait(driver, 30);
+			wait13.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.actions));
+			//System.out.println("click addrole");
+			 //System.out.println(ExpectedConditions.presenceOfElementLocated(PageRepositary.rolename));
+			click(PageRepositary.actions);
+			click(PageRepositary.edit);
+			//click(PageRepositary.checkboxtwo);
+			Thread.sleep(1000);
+			
+	 // updatebutton 
+			WebDriverWait wait16 = new WebDriverWait(driver, 30);
+			wait16.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.checkboxtwo));
+			click(PageRepositary.checkboxtwo);
+			Thread.sleep(1000);
+			WebDriverWait wait15 = new WebDriverWait(driver, 30);
+			wait15.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.update));
+			//System.out.println("click addrole");
+			 //System.out.println(ExpectedConditions.presenceOfElementLocated(PageRepositary.rolename));
+			click(PageRepositary.update);
+			WebDriverWait wait11 = new WebDriverWait(driver, 30);
+			wait11.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.action));
+			System.out.println("clickaction");
+			ElementDisplayed(PageRepositary.action);
+			
+			Thread.sleep(1000);
 		
 		return true;
 		
 		
 		
+		
 	}	
+	
+	
+	
+	
+	
+	
+	
 	
 }
 

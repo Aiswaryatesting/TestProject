@@ -17,8 +17,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import com.PageRepositary.PageRepositary_callcentreRole;
 
 import com.Utility.Log;
+import com.aventstack.extentreports.Status;
+import com.extentReports.ExtentTestManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -29,20 +32,21 @@ public class Base_Class {
 	public WebDriver getDriver() {
 		return driver;
 	}
-	
+	PageRepositary_callcentreRole PageRepositary= new PageRepositary_callcentreRole();
+
 	private static By L_username = By.xpath("//html/body/div/html/body/section/div/div/div[2]/div/form/input[1]");
 	private static By L_password = By.xpath("//html/body/div/html/body/section/div/div/div[2]/div/form/input[2]");
 	private static By L_signin = By.xpath("//html/body/div/html/body/section/div/div/div[2]/div/form/div[1]/button");
 	private static By L_sidemenu = By.xpath("//html/body/div/div[2]/body/div/div/nav/div/div/ul/li[2]/a/span[2]");
 	private static By L_role = By.xpath("//html/body/div/div[2]/body/div/div/nav/div/div/ul/li[2]/ul/li[2]/a/span");
-	private static By L_addrole =By.xpath("//html/body/div/div[2]/div[1]/div[3]/div/div/div/div/div/button[2]");
+	/*private static By L_addrole =By.xpath("//html/body/div/div[2]/div[1]/div[3]/div/div/div/div/div/button[2]");
 	private static By L_rolename = By.name("RoleName");
 	private static By L_checkbox = By.xpath("//html/body/div/div[2]/div[1]/div[2]/form/div[2]/div/div/table/tbody/tr[7]/td[2]/table/tbody/tr[1]/td/input");
 	private static By L_checkboxone = By.xpath("//html/body/div/div[2]/div[1]/div[2]/form/div[2]/div/div/table/tbody/tr[7]/td[2]/table/tbody/tr[2]/td/input");
 	private static By L_savebutton = By.xpath("//button[normalize-space()='Save']");
 	private static By L_validation = By.xpath("//div[@class='rz-growl-message");
 	private static By L_action = By.xpath("//span[normalize-space()='Action']");
-	private static By L_search = By.xpath("//html/body/div/div[2]/div[1]/div[3]/div/div/div/div/div/div/input");
+	private static By L_search = By.xpath("//html/body/div/div[2]/div[1]/div[3]/div/div/div/div/div/div/input"); */
 	
 	public static String Pagetitle;
 
@@ -99,15 +103,15 @@ public  void SetUp() throws IOException, InterruptedException {
 		click(L_signin);
 		click(L_sidemenu);
 		click(L_role);
-		click(L_addrole);
+		/*click(L_addrole);
 		click(L_rolename);
 		input(L_rolename, rolename);
 		click(L_checkbox);
 		click(L_checkboxone);
 		click(L_savebutton);
 		click(L_action);
-		click(L_search);
-		input(L_search, search);
+		click(L_search); 
+		input(L_search, search); */
 		//Thread.sleep(4000);
 		//click(DesktopNot);
 		//Thread.sleep(1000);
@@ -140,6 +144,19 @@ public static boolean ElementDisplayed(By locator)
 	return flag;
 }
 
+public void handlePopupDesktop() {
+	try {
+		WebElement popupElement = driver.findElement(PageRepositary.locators);
+		if (popupElement.isDisplayed()) {
+			System.out.println("Popup displayed for Desktop.. Clicking OK");
+			driver.findElement(PageRepositary.yes).click();
+			ExtentTestManager.getTest().log(Status.PASS, "Handled Desktop Notification Popup");
+			Log.info("Handing Desktop Notification Popup");
+		}
+	} catch (Exception e) {
+		System.out.println("Popup is not displayed for desktop");
+	}
+}
 }
 
 

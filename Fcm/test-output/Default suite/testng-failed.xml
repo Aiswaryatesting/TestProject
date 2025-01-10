@@ -5,7 +5,7 @@
     <classes>
       <class name="com.test.CallcentreModule.AllScenarios_CallCentremodule">
         <methods>
-          <include name="RUNALL" invocation-numbers="0 1"/>
+          <include name="RUNALL" invocation-numbers="0"/>
           <include name="reference"/>
         </methods>
       </class> <!-- com.test.CallcentreModule.AllScenarios_CallCentremodule -->
