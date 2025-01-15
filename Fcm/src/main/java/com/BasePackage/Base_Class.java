@@ -38,7 +38,7 @@ public class Base_Class {
 	private static By L_password = By.xpath("//html/body/div/html/body/section/div/div/div[2]/div/form/input[2]");
 	private static By L_signin = By.xpath("//html/body/div/html/body/section/div/div/div[2]/div/form/div[1]/button");
 	private static By L_sidemenu = By.xpath("//html/body/div/div[2]/body/div/div/nav/div/div/ul/li[2]/a/span[2]");
-	private static By L_role = By.xpath("//html/body/div/div[2]/body/div/div/nav/div/div/ul/li[2]/ul/li[2]/a/span");
+	//private static By L_role = By.xpath("//html/body/div/div[2]/body/div/div/nav/div/div/ul/li[2]/ul/li[2]/a/span");
 	/*private static By L_addrole =By.xpath("//html/body/div/div[2]/div[1]/div[3]/div/div/div/div/div/button[2]");
 	private static By L_rolename = By.name("RoleName");
 	private static By L_checkbox = By.xpath("//html/body/div/div[2]/div[1]/div[2]/form/div[2]/div/div/table/tbody/tr[7]/td[2]/table/tbody/tr[1]/td/input");
@@ -102,7 +102,7 @@ public  void SetUp() throws IOException, InterruptedException {
 		input(L_password, Password);
 		click(L_signin);
 		click(L_sidemenu);
-		click(L_role);
+		//click(L_role);
 		/*click(L_addrole);
 		click(L_rolename);
 		input(L_rolename, rolename);

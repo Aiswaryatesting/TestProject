@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 
 import com.BasePackage.Base_Class;
 import com.Pages_RoleModule.RoleManagmentModule;
+import com.Pages_RoleModule.Addusermodule;
 import com.Pages_LeaveModule.Leave_LeaveRequest;
 import com.Utility.Log;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -29,6 +30,7 @@ public class AllScenarios_CallCentremodule extends Base_Class {
 	TestListener TestListener;
 	com.Utility.ScreenShot screenShot;
 	RoleManagmentModule RoleManagmentModule;
+	Addusermodule Addusermodule;
 
 	private static By userDropDown = By.xpath("//div[@id='userDropdown']/h4");
 	private static By L_signout = By.xpath("//button[@class='dropdown-item ' and contains(text(),'Sign out')]");
@@ -43,6 +45,7 @@ public class AllScenarios_CallCentremodule extends Base_Class {
 		Base_Class = new Base_Class();
 		
 		RoleManagmentModule= new RoleManagmentModule();
+		Addusermodule = new Addusermodule();
 
 	}
 
@@ -79,6 +82,13 @@ public class AllScenarios_CallCentremodule extends Base_Class {
 			Thread.sleep(3000);
 			Log.info("before RoleManagmentModule !");
 			boolean flag1 = RoleManagmentModule.clickOnfcmModule(); 
+			Log.info("after RoleManagmentModule !");
+			
+			Thread.sleep(5000);
+			ExtentTestManager.startTest("TestScenario01 : Role management");
+			Thread.sleep(3000);
+			Log.info("before RoleManagmentModule !");
+			boolean flag2 = Addusermodule.Newusermodule(); 
 			Log.info("after RoleManagmentModule !");
 			
 			Thread.sleep(5000);

@@ -29,8 +29,16 @@ public class PageRepositary_callcentreRole {
 	public By  edit = By.xpath("//ul[contains(@class,'dropdown-menu show')]//button[contains(@type,'button')][normalize-space()='Edit']");
 	public By checkboxtwo = By.xpath("//input[@id='37']");
 	public By update = By.xpath("//button[normalize-space()='Save']");
-
-	
+	public By user = By.xpath("//a[@href='Admin/UserManagement']");
+	public By usernamegrid = By.xpath("//span[normalize-space()='User Name']");
+	public By Adduser = By.xpath("//a[normalize-space()='Add User']");
+	public By submitbutton = By.xpath("//button[normalize-space()='Submit']");
+	public By executive = By.xpath("//input[@id='AGAJlHwWQk']");
+	public By name = By.xpath("//input[@id='DOwfFrKnbE']");
+	public By email = By.name("Email");
+	public By mobile = By.name("Mobile");
+	public By Role = By.xpath("//html/body/div[1]/div[2]/div[1]/div[3]/div/form/div/div/div/div[5]/div/div/label");
+	public By inputrole= By.xpath("//html/body/div[2]/div[1]/input");
 }
 
 

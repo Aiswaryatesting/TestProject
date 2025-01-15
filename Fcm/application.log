@@ -1,7 +1,11 @@
-[INFO ] 2025-01-10 08:47:27.670 [main] Log - *** Running test method TC_RoleModule...
-[INFO ] 2025-01-10 08:47:29.729 [main] Log - Driver has initialized successfully for chromebrowser
-[INFO ] 2025-01-10 08:47:40.070 [main] Log - Title is displayed : BeaconICnRM
-[INFO ] 2025-01-10 08:48:06.166 [main] Log - Login successful !
-[INFO ] 2025-01-10 08:48:12.185 [main] Log - before RoleManagmentModule !
-[INFO ] 2025-01-10 08:51:14.606 [main] Log - after RoleManagmentModule !
-[INFO ] 2025-01-10 08:51:20.147 [main] Log - *** Test Suite TC_RoleModule ending ***
+[INFO ] 2025-01-14 11:39:25.709 [main] Log - *** Running test method TC_RoleModule...
+[INFO ] 2025-01-14 11:39:28.606 [main] Log - Driver has initialized successfully for chromebrowser
+[INFO ] 2025-01-14 11:40:30.295 [main] Log - Title is displayed : BeaconICnRM
+[INFO ] 2025-01-14 11:40:58.861 [main] Log - Login successful !
+[INFO ] 2025-01-14 11:41:09.889 [main] Log - before RoleManagmentModule !
+[INFO ] 2025-01-14 11:41:41.825 [main] Log - after RoleManagmentModule !
+[INFO ] 2025-01-14 11:41:49.831 [main] Log - before RoleManagmentModule !
+[ERROR] 2025-01-14 11:42:19.919 [main] Log - *** Test execution TC_RoleModule failed...
+[ERROR] 2025-01-14 11:42:19.920 [main] Log - Expected condition failed: waiting for presence of element located by: By.xpath: //input[@id='AGAJlHwWQk'] (tried for 30 second(s) with 500 milliseconds interval)
+[INFO ] 2025-01-14 11:42:20.676 [main] Log - Logout is done
+[INFO ] 2025-01-14 11:42:21.038 [main] Log - *** Test Suite TC_RoleModule ending ***
