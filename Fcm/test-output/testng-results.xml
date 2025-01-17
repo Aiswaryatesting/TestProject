@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-14T11:39:24 IST" name="Default suite" finished-at="2025-01-14T11:42:21 IST" duration-ms="176535">
+  <suite started-at="2025-01-17T09:18:26 IST" name="Default suite" finished-at="2025-01-17T09:20:01 IST" duration-ms="95512">
     <groups>
     </groups>
-    <test started-at="2025-01-14T11:39:24 IST" name="Default test" finished-at="2025-01-14T11:42:21 IST" duration-ms="176535">
-      <class name="com.test.CallcentreModule.AllScenarios_Adduser">
-        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.CallcentreModule.AllScenarios_Adduser@9d5509a]" started-at="2025-01-14T11:39:23 IST" name="reference" finished-at="2025-01-14T11:39:24 IST" duration-ms="808" status="PASS">
+    <test started-at="2025-01-17T09:18:26 IST" name="Default test" finished-at="2025-01-17T09:20:01 IST" duration-ms="95512">
+      <class name="com.test.CallcentreModule.AllScenarios_CallCentremodule">
+        <test-method is-config="true" signature="reference()[pri:0, instance:com.test.CallcentreModule.AllScenarios_CallCentremodule@179ece50]" started-at="2025-01-17T09:18:25 IST" name="reference" finished-at="2025-01-17T09:18:26 IST" duration-ms="543" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reference -->
-        <test-method signature="RUNALL(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.CallcentreModule.AllScenarios_Adduser@9d5509a]" started-at="2025-01-14T11:39:25 IST" name="RUNALL" data-provider="TestData" finished-at="2025-01-14T11:42:21 IST" duration-ms="175477" status="PASS">
+        <test-method signature="RUNALL(java.util.Map,org.testng.ITestContext)[pri:0, instance:com.test.CallcentreModule.AllScenarios_CallCentremodule@179ece50]" started-at="2025-01-17T09:18:27 IST" name="RUNALL" data-provider="TestData" finished-at="2025-01-17T09:20:01 IST" duration-ms="94842" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RUNALL -->
-      </class> <!-- com.test.CallcentreModule.AllScenarios_Adduser -->
+      </class> <!-- com.test.CallcentreModule.AllScenarios_CallCentremodule -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

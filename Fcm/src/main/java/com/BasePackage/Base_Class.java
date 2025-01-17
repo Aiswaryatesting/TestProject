@@ -98,10 +98,8 @@ public  void SetUp() throws IOException, InterruptedException {
 		Thread.sleep(9000);
 		Pagetitle = driver.getTitle();
 		Log.info("Title is displayed : "+Pagetitle);
-		input(L_username, UserName);
-		input(L_password, Password);
-		click(L_signin);
-		click(L_sidemenu);
+		login();
+//		click(L_sidemenu);
 		//click(L_role);
 		/*click(L_addrole);
 		click(L_rolename);
@@ -120,6 +118,18 @@ public  void SetUp() throws IOException, InterruptedException {
 	}
 
 
+public  void login() throws IOException, InterruptedException {
+	System.out.print("Login called......");
+	String UserName = configloader().getProperty("UserName");
+	String Password = configloader().getProperty("Password");
+	
+	WebDriverWait wait13 = new WebDriverWait(driver, 30);
+	wait13.until(ExpectedConditions.presenceOfElementLocated(PageRepositary.username));
+	
+	input(L_username, UserName);
+	input(L_password, Password);
+	click(L_signin);
+}
 public static  void input(By element, String Value) throws InterruptedException {
 
 

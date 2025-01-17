@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
-import org.openqa.selenium.By;
+//import org.openqa.selenium.By;
 import org.testng.ITestContext;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 import com.BasePackage.Base_Class;
 import com.Pages_RoleModule.RoleManagmentModule;
 import com.Pages_RoleModule.Addusermodule;
-import com.Pages_LeaveModule.Leave_LeaveRequest;
+
 import com.Utility.Log;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
@@ -23,7 +23,7 @@ import com.extentReports.ExtentManager;
 import com.extentReports.ExtentTestManager;
 import com.listeners.TestListener;
 
-public class AllScenarios_CallCentremodule extends Base_Class {
+public class AllScenarios_Rolemanagmentmodule extends Base_Class {
 	com.Utility.ExcelReader ExcelReader;
 	Base_Class Base_Class;
 	Log log;
@@ -32,8 +32,8 @@ public class AllScenarios_CallCentremodule extends Base_Class {
 	RoleManagmentModule RoleManagmentModule;
 	Addusermodule Addusermodule;
 
-	private static By userDropDown = By.xpath("//div[@id='userDropdown']/h4");
-	private static By L_signout = By.xpath("//button[@class='dropdown-item ' and contains(text(),'Sign out')]");
+	//private static By userDropDown = By.xpath("//div[@id='userDropdown']/h4");
+	//private static By L_signout = By.xpath("//button[@class='dropdown-item ' and contains(text(),'Sign out')]");
 	
 	@BeforeSuite
 	public void reference() {
@@ -45,7 +45,7 @@ public class AllScenarios_CallCentremodule extends Base_Class {
 		Base_Class = new Base_Class();
 		
 		RoleManagmentModule= new RoleManagmentModule();
-		Addusermodule = new Addusermodule();
+		//Addusermodule = new Addusermodule();
 
 	}
 

@@ -1,4 +1,6 @@
 package com.Pages_RoleModule;
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,7 +14,7 @@ import com.extentReports.ExtentTestManager;
 public class RoleManagmentModule extends Base_Class {
 	PageRepositary_callcentreRole PageRepositary= new PageRepositary_callcentreRole();
 	
-	public boolean clickOnfcmModule() throws InterruptedException 
+	public boolean clickOnfcmModule() throws IOException, InterruptedException 
 	{
 	
 		/*click(PageRepositary.username);
@@ -22,7 +24,7 @@ public class RoleManagmentModule extends Base_Class {
 		click(PageRepositary.submit);
 		Thread.sleep(2000); */
 		
-		//handlePopupDesktop();
+		handlePopupDesktop();
 		
 	
 		WebDriverWait wait1 = new WebDriverWait(driver, 30);
@@ -152,7 +154,23 @@ public class RoleManagmentModule extends Base_Class {
 		
 	}		
 	
-
+	public void handlePopupDesktop() {
+		try {
+			System.out.println("before......Handled Desktop Notification Popup");
+			WebElement popupElement = driver.findElement(PageRepositary.locators);
+			if (popupElement.isDisplayed()) {
+				System.out.println("Popup displayed for Desktop.. Clicking OK");
+				driver.findElement(PageRepositary.yes).click();
+				System.out.println("Handled Desktop Notification Popup");
+				login();
+//				ExtentTestManager.getTest().log(Status.PASS, "Handled Desktop Notification Popup");
+//				Log.info("Handing Desktop Notification Popup");
+			}
+		} catch (Exception e) {
+			System.out.println("Popup is not displayed for desktop");
+		}
+		
+	}
 }
 
 
